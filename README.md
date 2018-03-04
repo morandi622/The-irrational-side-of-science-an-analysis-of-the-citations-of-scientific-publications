@@ -1,9 +1,4 @@
 # The-irrational-side-of-science-an-analysis-of-the-citations-of-scientific-publications
-This project aims at analyzing the scientific citations in ArXiv and ADS.
-
-
-
-# The irrational side of science: an analysis of the citations of scientific publications
 
 
 This project aims at analyzing the scientific citations in [ArXiv](https://arxiv.org) and [ADS](http://adsabs.harvard.edu/abstract_service.html). In the title we use the word "irrational side of science" since we are interested in measuring factors which may impact the citation history of a paper beyond its intrinsic quality.
