@@ -60,7 +60,7 @@ In other words, early articles (1-5 in rank) found in the top position were cite
 However, Not-early articles found in the top position also received a similar, albeit much smaller, citation and full-text advantage compared to articles occupying lower list positions. This is so because they will appear a the top in  the "recent" (last 5 mailings) list.
 
 
-#Bayesian Hierarchical modelling of citations 
+# Bayesian Hierarchical modelling of citations 
 Hierarchical or multilevel modeling is a generalization of regression modeling.
 
 Hierarchical models are regression models in which the constituent model parameters are given probability models. This implies that model parameters are allowed to vary by group.
