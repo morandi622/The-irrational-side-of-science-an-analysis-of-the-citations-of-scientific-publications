@@ -70,7 +70,7 @@ Observational units are often naturally clustered. Clustering induces dependence
 
 The general idea is that is to model citation  vs. rank position in the ArXiv listing via hierarchical linear regression, that is 
 
-__log(cit+1)~\alpha*log(rank) + const__, 
+__log(cit+1)~$\alpha$*log(rank) + const__, 
 
 where publications in days with similar number of listing would share same slope \alpha. __This methodology adds the benefits to properly account for the impact of different length of the daily digest from one day to another.__
 
