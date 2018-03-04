@@ -7,7 +7,7 @@ The code is written in Python. There are 3 routines:
 
 * analysis.py: it is a program to perform all the analysis of the paper's database;
 
-* ArXivRunner.py: the code to submit a paper on ArXiv at 14.00 EDT **sharp** to have the paper appear at the top on the general â€œnew preprintsâ€ list;
+* ArXivRunner.py: the code to submit a paper on ArXiv at 14.00 EDT **sharp** to have the paper appear at the top on the general new preprints list;
 
 * ArXivSpider.py: the code to crawl the [ArXiv](https://arxiv.org) and [ADS](http://adsabs.harvard.edu/abstract_service.html) server and build a database.
 
@@ -19,7 +19,7 @@ Goals:
 * Impact factor
 
 
-#Overview
+# Overview
 The [ArXiv](https://arxiv.org) repository currently contains over 500,000 documents. For over a decade, it
 has been the primary means of access to the research literature in many fields of physics and
 in some related fields. The arXiv corpus is divided
