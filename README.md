@@ -36,7 +36,8 @@ We crawled the ArXiv and ADS archives to fetch abstracts, title, authors and cit
 Here we present the number of submitted papers in ArXiv vs. their submission time (seconds from cutoff submission time).
 
 ![Alt text](figs/fig.png)
-Note the spike in the first 10 minutes as some submitters jostle for top-ranked slots in the following dayâ€™s announcements. The daily queue begins with articles deposited after 4:00 pm each afternoon.
+
+Note the spike in the first 10 minutes as some submitters jostle for top-ranked slots in the following days announcements. The daily queue begins with articles deposited after 4:00 pm each afternoon.
 
 
 ![Alt text](figs/fig2.png)
@@ -46,15 +47,17 @@ In the above Fig. we show the kernel density estimation of citations for each po
 We remember that the KDE is closely related to the probability for a paper to have a citation in a certain range. 
 
 Note that effects of "self-promoted" (SP) articles (that authors can intuit in advance the quality of their articles and specifically aim to promote the better ones through early submission) from visibility bias (VB) (that is the initial higher visibility of being atop of the list translates to higher readership, and some fraction of that higher readership translates to higher citations later on) are entangled. Below we split "early" submission into two groups, papers submitted before and after 10 min from the cutoff submission time. The former corresponds to SP, while the latter to VB. 
+
 ![Alt text](figs/fig6.png)
+
 Note that the two effects are comparable in terms of boosting of citations.
 
 With VB there is a accidental forms of visibility can drive early readership, with consequent early citation potentially initiating a feedback loop to more readership and citation, ultimately leaving measurable and significant traces in the citation record.
 
-In other words, â€œEarlyâ€ articles (1-5 in rank) found in the top position were cited more frequently than articles found lower in the queue.
+In other words, early articles (1-5 in rank) found in the top position were cited more frequently than articles found lower in the queue.
 
 
-However, â€œNot earlyâ€ articles found in the top position also received a similar, albeit much smaller, citation and full-text advantage compared to articles occupying lower list positions. This is so because they will appear a the top in  the "recent" (last 5 mailings) list.
+However, Not-early articles found in the top position also received a similar, albeit much smaller, citation and full-text advantage compared to articles occupying lower list positions. This is so because they will appear a the top in  the "recent" (last 5 mailings) list.
 
 
 #Bayesian Hierarchical modelling of citations 
@@ -82,6 +85,7 @@ We used the Theano library and a Student pdf (less prone to outliers) to perform
 Here we are interested in analyzing the overall abstracts published during the aforementioned periods (about 100,000 publication), to assess whether they correlate with the citations. We used the __spacy__ and __nltk__ libraries to build the tf_idf. The latter has been fitted via Lasso linear regression vs. the citation of each paper. The regularization parameter has been determined via cross-validation.
 
 While many words correlate with the citations, they turn out to be confounding variables and simply related to an topics, for example Dark matter, which generates a lot of publications. By focusing on __adjective__ words only (via a tag analysis in NLTK), we can assess the impact of non-confounding variables on the citations.  
+
 ![Alt text](figs/fig3.png)
 
 Here we build the KDE of some non-confounding words vs. citation. Note that words we express caution - suggest, speculate, indicate - leads to overall lower citations. Statistically, words with strong positive meaning - unprecedented, significantly , strongly - lead to higher citations.
@@ -96,19 +100,22 @@ By analyzing the whole papers via a custom document summarization algorithm on t
 
 Along a similar line, words we indicate "agreement" with respect to previous literature are catching less the eyes of readers less than words like "issues, disagreement, disprove, contrast". Readers are more interested in something novel rather than a confirmation of previous results.
 
-#Post it before or after acceptance for publication?
+# Post it before or after acceptance for publication?
 It appears that papers posted on ArXiv before they are accepted for publication on the respective journal receive more citation than papers posted after they are accepted. 
+
 ![Alt text](figs/fig5.png)
+
 One possible explanation is that the former paper collect more feedback from the scientific community, since are "in progress" and so comment can be easily incorporated.
 
 
 
 
 
-#Analysis of impact factor
+# Analysis of impact factor
 Impact factor is a metric (or better a number) for assessing citations that a journal receives. It is intended to reflect the yearly average number of citations to recent articles published in that journal. Journals with higher impact factors are often deemed to be more important than those with lower ones in a certain research field.
 
 In any given year, the impact factor of a journal is the number of citations, received in that year, of articles published in that journal during the two preceding years, divided by the total number of articles published in that journal during the two preceding years:
+
 ![Alt text](figs/fig4.png)
 
 
