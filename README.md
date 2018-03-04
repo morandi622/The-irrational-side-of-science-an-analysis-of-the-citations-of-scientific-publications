@@ -70,13 +70,13 @@ Observational units are often naturally clustered. Clustering induces dependence
 
 The general idea is that is to model citation  vs. rank position in the ArXiv listing via hierarchical linear regression, that is 
 
-__log(cit+1)~$\alpha$*log(rank) + const__, 
+__log(cit+1)~alpha*log(rank) + const__, 
 
-where publications in days with similar number of listing would share same slope \alpha. __This methodology adds the benefits to properly account for the impact of different length of the daily digest from one day to another.__
+where publications in days with similar number of listing would share same slope alpha. __This methodology adds the benefits to properly account for the impact of different length of the daily digest from one day to another.__
 
 
 
-We used the Theano library and a Student pdf (less prone to outliers) to perform hierarchical linear regression, and we __\alpha~-0.2__, confirming the intuition that the rank of the position in the daily listing affects the overall citations. As a rule of thumb -given a typical listing length - thi translates into about 20% of visibility factor between paper at the top vs. tail of the daily digest.
+We used the Theano library and a Student pdf (less prone to outliers) to perform hierarchical linear regression, and we __alpha~-0.2__, confirming the intuition that the rank of the position in the daily listing affects the overall citations. As a rule of thumb -given a typical listing length - thi translates into about 20% of visibility factor between paper at the top vs. tail of the daily digest.
 
 
 
